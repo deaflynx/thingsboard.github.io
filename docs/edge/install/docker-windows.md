@@ -51,7 +51,7 @@ services:
     restart: always
     image: "thingsboard-edge/tb-postgres"
     ports:
-      - "8090:9090"
+      - "8090:8080"
       - "11883:1883"
       - "15683:5683/udp"
     environment:
@@ -94,9 +94,9 @@ docker-compose up
 In order to get access to necessary resources from external IP/Host on Windows machine, please execute the following commands:
 ``` 
 set PATH=%PATH%;"C:\Program Files\Oracle\VirtualBox"
-$ VBoxManage controlvm "default" natpf1 "tcp-8090,tcp,,8090,,9090"  
-$ VBoxManage controlvm "default" natpf1 "tcp-11883,tcp,,11883,,1883"
-$ VBoxManage controlvm "default" natpf1 "tcp-15683,tcp,,15683,,5683"
+VBoxManage controlvm "default" natpf1 "tcp-8090,tcp,,8090,,9090"  
+VBoxManage controlvm "default" natpf1 "tcp-11883,tcp,,11883,,1883"
+VBoxManage controlvm "default" natpf1 "tcp-15683,tcp,,15683,,5683"
 ```
 Where:
 - `C:\Program Files\Oracle\VirtualBox` - path to your VirtualBox installation directory
