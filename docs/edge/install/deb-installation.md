@@ -53,7 +53,7 @@ sudo service tb-edge restart
 
 ### Step 7. Open ThingsBoard Edge UI
 
-{% include templates/edge/install/open-edge-ui.md %} 
+{% include templates/edge/install/open-edge-ui.md %}
 
 ### Troubleshootings
 
