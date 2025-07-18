@@ -13,9 +13,3 @@ The SCRAM authentication method is always handled by the broker according to the
 {% include templates/info-banner.md content=scramExecution %}
 
 {% include images-gallery.html imageCollection="authentication-settings" %}
-
-{% capture downgrade-attacks %}
-Placing a weaker authentication method e.g., **Basic** after a stronger method, e.g., **X.509 Certificate Chain** in the execution order may expose the system to downgrade attacks.
-If fallback to a weaker method is necessary, configure it with a higher priority (placed earlier) in the execution order to reduce the risk of clients bypassing stronger authentication checks.
-{% endcapture %}
-{% include templates/warn-banner.md content=downgrade-attacks %}
